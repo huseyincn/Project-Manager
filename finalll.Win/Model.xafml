@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo">
+  <NavigationItems NavigationStyle="NavBar" DefaultChildItemsDisplayStyle="List">
+    <Items>
+      <Item Id="Default">
+        <Items>
+          <Item Id="Calisan_ListView" ImageName="BO_Person_32x32" />
+          <Item Id="Gorev_ListView" ImageName="Task_32x32" />
+          <Item Id="KilometreTasi_ListView" ImageName="Cube_32x32" />
+          <Item Id="Project_ListView" ImageName="BO_Project" />
+          <Item Id="ProjeYurutucusu_ListView" ImageName="BO_Customer_32x32" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options UIType="TabbedMDI" FormStyle="Ribbon" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="23.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="23.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="23.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="23.1.6.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>
