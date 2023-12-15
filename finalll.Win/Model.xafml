@@ -2,13 +2,14 @@
 <Application Logo="ExpressAppLogo">
   <NavigationItems NavigationStyle="NavBar" DefaultChildItemsDisplayStyle="List">
     <Items>
-      <Item Id="Default">
+      <Item Id="Default" Caption="Kullanıcı Yönetimi" />
+      <Item Id="Proje Yönetimi">
         <Items>
-          <Item Id="Calisan_ListView" ImageName="BO_Person_32x32" />
-          <Item Id="Gorev_ListView" ImageName="Task_32x32" />
-          <Item Id="KilometreTasi_ListView" ImageName="Cube_32x32" />
-          <Item Id="Project_ListView" ImageName="BO_Project" />
-          <Item Id="ProjeYurutucusu_ListView" ImageName="BO_Customer_32x32" />
+          <Item Id="Calisan_ListView" ImageName="BO_Employee" />
+          <Item Id="Gorev_ListView" ImageName="BO_Task" />
+          <Item Id="KilometreTasi_ListView" ImageName="ModelEditor_Action_Modules_32x32" />
+          <Item Id="Project_ListView" ImageName="BO_Project_Large" />
+          <Item Id="ProjeYurutucusu_ListView" ImageName="BO_Position_v92" />
         </Items>
       </Item>
     </Items>

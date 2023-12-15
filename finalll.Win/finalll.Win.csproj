@@ -51,4 +51,9 @@
   <ItemGroup>
     <ProjectReference Include="..\finalll.Module\finalll.Module.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="UnusableNodes.xml">
+      <DependentUpon>Model.xafml</DependentUpon>
+    </None>
+  </ItemGroup>
 </Project>
