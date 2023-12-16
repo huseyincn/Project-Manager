@@ -1,5 +1,7 @@
 ﻿using DevExpress.Persistent.Base;
+using DevExpress.Persistent.Base.General;
 using DevExpress.Xpo;
+using System.ComponentModel;
 
 namespace finalll.Module.BusinessObjects
 {
@@ -8,37 +10,44 @@ namespace finalll.Module.BusinessObjects
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
-    [Persistent("KILOMETRE_TASI")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class KilometreTasi : XPObject
-    { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        // Use CodeRush to create XPO classes and properties with a few keystrokes.
-        // https://docs.devexpress.com/CodeRushForRoslyn/118557
-        public KilometreTasi(Session session)
+    public class KilometreTasi : STreeNode
+    {
+        protected override ITreeNode Parent
+        {
+            get
+            {
+                return null;
+            }
+        }
+        protected override IBindingList Children
+        {
+            get
+            {
+                return Projects;
+            }
+        }
+        public KilometreTasi(Session session) : base(session) { }
+        public KilometreTasi(Session session, string name)
             : base(session)
         {
+            this.Name = name;
         }
-        public override void AfterConstruction()
+        [Association("ProjectGroup-Projects"), Aggregated]
+        public XPCollection<Gorev> Projects
         {
-            base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+            get
+            {
+                return GetCollection<Gorev>("Projects");
+            }
         }
 
-        private Project _project;
-
-        [Association("Project-Milestones")]
-        public Project Project
+        Project projeninIsmi;
+        [Association("Project-KMTaslari", typeof(KilometreTasi))]
+        public Project ProjeninIsmi
         {
-            get { return _project; }
-            set { SetPropertyValue(nameof(Project), ref _project, value); }
+            get => projeninIsmi;
+            set => SetPropertyValue(nameof(ProjeninIsmi), ref projeninIsmi, value);
         }
-
-
-        [Association("Milestone-Tasks")]
-        public XPCollection<Gorev> Tasks
-        {
-            get { return GetCollection<Gorev>(nameof(Tasks)); }
-        }
-
     }
 }

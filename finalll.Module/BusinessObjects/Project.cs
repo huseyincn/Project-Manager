@@ -1,4 +1,6 @@
 ﻿using DevExpress.Persistent.Base;
+using DevExpress.Persistent.Base.General;
+using DevExpress.Persistent.BaseImpl;
 using DevExpress.Xpo;
 using System.ComponentModel;
 
@@ -21,7 +23,6 @@ namespace finalll.Module.BusinessObjects
         public override void AfterConstruction()
         {
             base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
         }
 
         public enum ProjeDurumu
@@ -59,14 +60,6 @@ namespace finalll.Module.BusinessObjects
         private int _projeGetirisi;
         private ParasalGetiriTipi _parasalGetiriTipi;
         private ProjeTipi _projeTipi;
-
-
-
-        [Association("Project-Milestones")]
-        public XPCollection<KilometreTasi> Milestones
-        {
-            get { return GetCollection<KilometreTasi>(nameof(Milestones)); }
-        }
 
         [Size(SizeAttribute.DefaultStringMappingFieldSize)]
         public string ProjeAdi
@@ -112,12 +105,14 @@ namespace finalll.Module.BusinessObjects
             set => SetPropertyValue(nameof(KayitTarihi), ref _kayitTarihi, value);
         }
 
+        [Browsable(true)]
         public DateTime ProjeBaslangici
         {
             get => _projeBaslangici;
             set => SetPropertyValue(nameof(ProjeBaslangici), ref _projeBaslangici, value);
         }
 
+        [Browsable(true)]
         public DateTime ProjeBitisi
         {
             get => _projeBitisi;
@@ -164,8 +159,7 @@ namespace finalll.Module.BusinessObjects
             }
         }
 
-
-        [DevExpress.Xpo.Aggregated, DevExpress.Xpo.Association("ProjectFiles")]
+        [Association("Dokumanlar"), Aggregated]
         public XPCollection<Dokuman> Files
         {
             get { return GetCollection<Dokuman>(nameof(Files)); }
@@ -177,23 +171,14 @@ namespace finalll.Module.BusinessObjects
             set => SetPropertyValue(nameof(projetipi), ref _projeTipi, value);
         }
 
-        //public void AddFile(FileData file)
-        //{
-        //    Dokuman myFile = new Dokuman(Session);
-        //    myFile.File = file;
-        //    myFile.Project = this;
-        //    Files.Add(myFile);
-        //}
-
-        //public void AddFileToProject(Project project, string filePath, string fileName)
-        //{
-        //    var fileData = new FileData(project.Session);
-        //    using (var stream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
-        //    {
-        //        fileData.LoadFromStream(fileName, stream);
-        //    }
-        //    project.Files.Add(fileData);
-        //}
+        [Association("Project-KMTaslari", typeof(KilometreTasi)),Aggregated]
+        public XPCollection<KilometreTasi> KMTaslari
+        {
+            get
+            {
+                return GetCollection<KilometreTasi>(nameof(KMTaslari));
+            }
+        }
 
         //private string _PersistentProperty;
         //[XafDisplayName("My display name"), ToolTip("My hint message")]

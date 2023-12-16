@@ -1,4 +1,5 @@
-﻿namespace finalll.Win {
+﻿namespace finalll.Win
+{
     partial class XafSplashScreen
     {
         /// <summary>
@@ -28,143 +29,150 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XafSplashScreen));
-            this.progressBarControl = new DevExpress.XtraEditors.MarqueeProgressBarControl();
-            this.labelCopyright = new DevExpress.XtraEditors.LabelControl();
-            this.labelStatus = new DevExpress.XtraEditors.LabelControl();
-            this.peImage = new DevExpress.XtraEditors.PictureEdit();
-            this.peLogo = new DevExpress.XtraEditors.PictureEdit();
-            this.pcApplicationName = new DevExpress.XtraEditors.PanelControl();
-            this.labelSubtitle = new DevExpress.XtraEditors.LabelControl();
-            this.labelApplicationName = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peLogo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcApplicationName)).BeginInit();
-            this.pcApplicationName.SuspendLayout();
-            this.SuspendLayout();
+            progressBarControl = new DevExpress.XtraEditors.MarqueeProgressBarControl();
+            labelCopyright = new DevExpress.XtraEditors.LabelControl();
+            labelStatus = new DevExpress.XtraEditors.LabelControl();
+            peImage = new DevExpress.XtraEditors.PictureEdit();
+            peLogo = new DevExpress.XtraEditors.PictureEdit();
+            pcApplicationName = new DevExpress.XtraEditors.PanelControl();
+            labelSubtitle = new DevExpress.XtraEditors.LabelControl();
+            labelApplicationName = new DevExpress.XtraEditors.LabelControl();
+            ((System.ComponentModel.ISupportInitialize)progressBarControl.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)peImage.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)peLogo.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcApplicationName).BeginInit();
+            pcApplicationName.SuspendLayout();
+            SuspendLayout();
             // 
             // progressBarControl
             // 
-            this.progressBarControl.EditValue = 0;
-            this.progressBarControl.Location = new System.Drawing.Point(74, 271);
-            this.progressBarControl.Name = "progressBarControl";
-            this.progressBarControl.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(194)))), ((int)(((byte)(194)))));
-            this.progressBarControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.progressBarControl.Properties.EndColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(114)))), ((int)(((byte)(0)))));
-            this.progressBarControl.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
-            this.progressBarControl.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
-            this.progressBarControl.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.progressBarControl.Properties.ProgressViewStyle = DevExpress.XtraEditors.Controls.ProgressViewStyle.Solid;
-            this.progressBarControl.Properties.StartColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(144)))), ((int)(((byte)(0)))));
-            this.progressBarControl.Size = new System.Drawing.Size(350, 16);
-            this.progressBarControl.TabIndex = 5;
+            progressBarControl.EditValue = 0;
+            progressBarControl.Location = new Point(86, 334);
+            progressBarControl.Margin = new Padding(4);
+            progressBarControl.Name = "progressBarControl";
+            progressBarControl.Properties.Appearance.BorderColor = Color.FromArgb(195, 194, 194);
+            progressBarControl.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            progressBarControl.Properties.EndColor = Color.FromArgb(255, 114, 0);
+            progressBarControl.Properties.LookAndFeel.SkinName = "Visual Studio 2013 Blue";
+            progressBarControl.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
+            progressBarControl.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
+            progressBarControl.Properties.ProgressViewStyle = DevExpress.XtraEditors.Controls.ProgressViewStyle.Solid;
+            progressBarControl.Properties.StartColor = Color.FromArgb(255, 144, 0);
+            progressBarControl.Size = new Size(408, 20);
+            progressBarControl.TabIndex = 5;
             // 
             // labelCopyright
             // 
-            this.labelCopyright.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.labelCopyright.Location = new System.Drawing.Point(24, 324);
-            this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(47, 13);
-            this.labelCopyright.TabIndex = 6;
-            this.labelCopyright.Text = "Copyright";
+            labelCopyright.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            labelCopyright.Location = new Point(28, 399);
+            labelCopyright.Margin = new Padding(4);
+            labelCopyright.Name = "labelCopyright";
+            labelCopyright.Size = new Size(54, 16);
+            labelCopyright.TabIndex = 6;
+            labelCopyright.Text = "Copyright";
             // 
             // labelStatus
             // 
-            this.labelStatus.Location = new System.Drawing.Point(75, 253);
-            this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(50, 13);
-            this.labelStatus.TabIndex = 7;
-            this.labelStatus.Text = "Starting...";
+            labelStatus.Location = new Point(88, 311);
+            labelStatus.Margin = new Padding(4);
+            labelStatus.Name = "labelStatus";
+            labelStatus.Size = new Size(57, 16);
+            labelStatus.TabIndex = 7;
+            labelStatus.Text = "Starting...";
             // 
             // peImage
             // 
-            this.peImage.EditValue = ((object)(resources.GetObject("peImage.EditValue")));
-            this.peImage.Location = new System.Drawing.Point(12, 12);
-            this.peImage.Name = "peImage";
-            this.peImage.Properties.AllowFocused = false;
-            this.peImage.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.peImage.Properties.Appearance.Options.UseBackColor = true;
-            this.peImage.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.peImage.Properties.ShowMenu = false;
-            this.peImage.Size = new System.Drawing.Size(426, 180);
-            this.peImage.TabIndex = 9;
-            this.peImage.Visible = false;
+            peImage.EditValue = resources.GetObject("peImage.EditValue");
+            peImage.Location = new Point(14, 15);
+            peImage.Margin = new Padding(4);
+            peImage.Name = "peImage";
+            peImage.Properties.AllowFocused = false;
+            peImage.Properties.Appearance.BackColor = Color.Transparent;
+            peImage.Properties.Appearance.Options.UseBackColor = true;
+            peImage.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            peImage.Properties.ShowMenu = false;
+            peImage.Size = new Size(497, 222);
+            peImage.TabIndex = 9;
+            peImage.Visible = false;
             // 
             // peLogo
             // 
-            this.peLogo.EditValue = ((object)(resources.GetObject("peLogo.EditValue")));
-            this.peLogo.Location = new System.Drawing.Point(400, 328);
-            this.peLogo.Name = "peLogo";
-            this.peLogo.Properties.AllowFocused = false;
-            this.peLogo.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.peLogo.Properties.Appearance.Options.UseBackColor = true;
-            this.peLogo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.peLogo.Properties.ShowMenu = false;
-            this.peLogo.Size = new System.Drawing.Size(70, 20);
-            this.peLogo.TabIndex = 8;
+            peLogo.Location = new Point(467, 404);
+            peLogo.Margin = new Padding(4);
+            peLogo.Name = "peLogo";
+            peLogo.Properties.AllowFocused = false;
+            peLogo.Properties.Appearance.BackColor = Color.Transparent;
+            peLogo.Properties.Appearance.Options.UseBackColor = true;
+            peLogo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            peLogo.Properties.ShowMenu = false;
+            peLogo.Size = new Size(82, 25);
+            peLogo.TabIndex = 8;
             // 
             // pcApplicationName
             // 
-            this.pcApplicationName.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(114)))), ((int)(((byte)(0)))));
-            this.pcApplicationName.Appearance.Options.UseBackColor = true;
-            this.pcApplicationName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pcApplicationName.Controls.Add(this.labelSubtitle);
-            this.pcApplicationName.Controls.Add(this.labelApplicationName);
-			this.pcApplicationName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pcApplicationName.Location = new System.Drawing.Point(1, 1);
-            this.pcApplicationName.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.pcApplicationName.Name = "pcApplicationName";
-            this.pcApplicationName.Size = new System.Drawing.Size(494, 220);
-            this.pcApplicationName.TabIndex = 10;
+            pcApplicationName.Appearance.BackColor = Color.FromArgb(255, 114, 0);
+            pcApplicationName.Appearance.Options.UseBackColor = true;
+            pcApplicationName.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            pcApplicationName.Controls.Add(labelSubtitle);
+            pcApplicationName.Controls.Add(labelApplicationName);
+            pcApplicationName.Dock = DockStyle.Top;
+            pcApplicationName.Location = new Point(1, 1);
+            pcApplicationName.LookAndFeel.UseDefaultLookAndFeel = false;
+            pcApplicationName.Margin = new Padding(4);
+            pcApplicationName.Name = "pcApplicationName";
+            pcApplicationName.Size = new Size(577, 271);
+            pcApplicationName.TabIndex = 10;
             // 
             // labelSubtitle
             // 
-            this.labelSubtitle.Appearance.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSubtitle.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(188)))));
-            this.labelSubtitle.Appearance.Options.UseFont = true;
-            this.labelSubtitle.Appearance.Options.UseForeColor = true;
-            this.labelSubtitle.Location = new System.Drawing.Point(222, 131);
-            this.labelSubtitle.Name = "labelSubtitle";
-            this.labelSubtitle.Size = new System.Drawing.Size(64, 25);
-            this.labelSubtitle.TabIndex = 1;
-            this.labelSubtitle.Text = "Subtitle";
+            labelSubtitle.Appearance.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSubtitle.Appearance.ForeColor = Color.FromArgb(255, 216, 188);
+            labelSubtitle.Appearance.Options.UseFont = true;
+            labelSubtitle.Appearance.Options.UseForeColor = true;
+            labelSubtitle.Location = new Point(211, 161);
+            labelSubtitle.Margin = new Padding(4);
+            labelSubtitle.Name = "labelSubtitle";
+            labelSubtitle.Size = new Size(149, 32);
+            labelSubtitle.TabIndex = 1;
+            labelSubtitle.Text = "Dönem Ödevi";
             // 
             // labelApplicationName
             // 
-            this.labelApplicationName.Appearance.Font = new System.Drawing.Font("Segoe UI", 26.25F);
-            this.labelApplicationName.Appearance.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelApplicationName.Appearance.Options.UseFont = true;
-            this.labelApplicationName.Appearance.Options.UseForeColor = true;
-            this.labelApplicationName.Location = new System.Drawing.Point(123, 84);
-            this.labelApplicationName.Name = "labelApplicationName";
-            this.labelApplicationName.Size = new System.Drawing.Size(278, 47);
-            this.labelApplicationName.TabIndex = 0;
-            this.labelApplicationName.Text = "Application Name";
+            labelApplicationName.Appearance.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelApplicationName.Appearance.ForeColor = SystemColors.Window;
+            labelApplicationName.Appearance.Options.UseFont = true;
+            labelApplicationName.Appearance.Options.UseForeColor = true;
+            labelApplicationName.Location = new Point(144, 103);
+            labelApplicationName.Margin = new Padding(4);
+            labelApplicationName.Name = "labelApplicationName";
+            labelApplicationName.Size = new Size(297, 60);
+            labelApplicationName.TabIndex = 0;
+            labelApplicationName.Text = "Proje Yöneticisi";
             // 
             // XafSplashScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(496, 370);
-            this.Controls.Add(this.pcApplicationName);
-            this.Controls.Add(this.peImage);
-            this.Controls.Add(this.peLogo);
-            this.Controls.Add(this.labelStatus);
-            this.Controls.Add(this.labelCopyright);
-            this.Controls.Add(this.progressBarControl);
-            this.Name = "XafSplashScreen";
-            this.Padding = new System.Windows.Forms.Padding(1);
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.progressBarControl.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peLogo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pcApplicationName)).EndInit();
-            this.pcApplicationName.ResumeLayout(false);
-            this.pcApplicationName.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 16F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(579, 455);
+            Controls.Add(pcApplicationName);
+            Controls.Add(peImage);
+            Controls.Add(peLogo);
+            Controls.Add(labelStatus);
+            Controls.Add(labelCopyright);
+            Controls.Add(progressBarControl);
+            Margin = new Padding(4);
+            Name = "XafSplashScreen";
+            Padding = new Padding(1);
+            Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)progressBarControl.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)peImage.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)peLogo.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcApplicationName).EndInit();
+            pcApplicationName.ResumeLayout(false);
+            pcApplicationName.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

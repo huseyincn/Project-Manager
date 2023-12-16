@@ -5,7 +5,8 @@ using DevExpress.Xpo;
 namespace finalll.Module.BusinessObjects
 {
     [DefaultClassOptions]
-   public class Dokuman : FileData
+    [FileAttachment("File")]
+    public class Dokuman : FileData
     { 
         public Dokuman(Session session)
             : base(session)
@@ -15,12 +16,13 @@ namespace finalll.Module.BusinessObjects
         {
             base.AfterConstruction();
         }
+
         private Project _project;
-        [Association("ProjectFiles")]
-        public Project ProjectToAttach
+        [Association("Dokumanlar")]
+        public Project Project
         {
             get { return _project; }
-            set { SetPropertyValue(nameof(ProjectToAttach), ref _project, value); }
+            set { SetPropertyValue(nameof(Project), ref _project, value); }
         }
     }
 }

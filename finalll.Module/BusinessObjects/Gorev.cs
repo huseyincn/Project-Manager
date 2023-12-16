@@ -1,5 +1,7 @@
 ﻿using DevExpress.Persistent.Base;
+using DevExpress.Persistent.Base.General;
 using DevExpress.Xpo;
+using System.ComponentModel;
 
 namespace finalll.Module.BusinessObjects
 {
@@ -8,28 +10,41 @@ namespace finalll.Module.BusinessObjects
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
-    [Persistent("GOREV")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class Gorev : XPObject
-    { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        // Use CodeRush to create XPO classes and properties with a few keystrokes.
-        // https://docs.devexpress.com/CodeRushForRoslyn/118557
-        public Gorev(Session session)
+    public class Gorev : STreeNode
+    {
+        private KilometreTasi projectGroup;
+        protected override ITreeNode Parent
+        {
+            get
+            {
+                return projectGroup;
+            }
+        }
+        protected override IBindingList Children
+        {
+            get
+            {
+                return new BindingList<object>(); ;
+            }
+        }
+        public Gorev(Session session) : base(session) { }
+        public Gorev(Session session, string name)
             : base(session)
         {
+            this.Name = name;
         }
-        public override void AfterConstruction()
+        [Association("ProjectGroup-Projects")]
+        public KilometreTasi ProjectGroup
         {
-            base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
-        }
-        private KilometreTasi _milestone;
-
-        [Association("Milestone-Tasks")]
-        public KilometreTasi Milestone
-        {
-            get { return _milestone; }
-            set { SetPropertyValue(nameof(Milestone), ref _milestone, value); }
+            get
+            {
+                return projectGroup;
+            }
+            set
+            {
+                SetPropertyValue("ProjectGroup", ref projectGroup, value);
+            }
         }
     }
 }
