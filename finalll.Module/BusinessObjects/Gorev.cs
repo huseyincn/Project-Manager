@@ -1,16 +1,21 @@
-﻿using DevExpress.Persistent.Base;
+﻿using DevExpress.ExpressApp.ConditionalAppearance;
+using DevExpress.Persistent.Base;
 using DevExpress.Persistent.Base.General;
+using DevExpress.Persistent.BaseImpl;
 using DevExpress.Xpo;
 using System.ComponentModel;
 
 namespace finalll.Module.BusinessObjects
 {
     [DefaultClassOptions]
+    [FileAttachment("Files")]
     [NavigationItem("Proje Yönetimi")]
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
+    [Appearance("RedIfDue", TargetItems = "*", Criteria = "EndDate < LocalDateTimeToday() AND TaskDurumu != 'BITMIS'", BackColor = "Red")]
+    [Appearance("GreenIfDone", TargetItems = "*", Criteria = "TaskDurumu = 'BITMIS'", BackColor = "Green")]
     public class Gorev : STreeNode
     {
         private KilometreTasi projectGroup;
@@ -45,6 +50,27 @@ namespace finalll.Module.BusinessObjects
             {
                 SetPropertyValue("ProjectGroup", ref projectGroup, value);
             }
+        }
+
+        private DateTime _endDate;
+        public DateTime EndDate
+        {
+            get { return _endDate; }
+            set { SetPropertyValue("EndDate", ref _endDate, value); }
+        }
+
+        public enum TaskDurum
+        {
+            BASLAMAMIS,
+            DEVAM_EDIYOR,
+            BITMIS
+        }
+
+        private TaskDurum _taskDurum;
+        public TaskDurum TaskDurumu
+        {
+            get { return _taskDurum; }
+            set { SetPropertyValue("TaskDurumu", ref _taskDurum, value); }
         }
     }
 }

@@ -1,2 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Application />
+<Application Title="Proje Yönetimi">
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="23.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="23.1.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="23.1.6.0" IsNewNode="True" />
+  </SchemaModules>
+</Application>

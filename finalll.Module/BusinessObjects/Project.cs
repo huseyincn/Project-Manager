@@ -159,10 +159,17 @@ namespace finalll.Module.BusinessObjects
             }
         }
 
-        [Association("Dokumanlar"), Aggregated]
+        //[Association("Dokumanlar"), Aggregated]
+        //public XPCollection<Dokuman> Files
+        //{
+        //    get { return GetCollection<Dokuman>(nameof(Files)); }
+        //}
+
+
+        [Association, Aggregated]
         public XPCollection<Dokuman> Files
         {
-            get { return GetCollection<Dokuman>(nameof(Files)); }
+            get { return GetCollection<Dokuman>("Files"); }
         }
 
         public ProjeTipi projetipi

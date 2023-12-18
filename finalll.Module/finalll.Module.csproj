@@ -34,8 +34,20 @@
     <PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" Version="23.1.6" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.ExpressApp.FileAttachment.Win.v23.1">
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Offline Packages\devexpress.expressapp.fileattachment.win\23.1.6\lib\net6.0-windows\DevExpress.ExpressApp.FileAttachment.Win.v23.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.ExpressApp.TreeListEditors.Win.v23.1">
       <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Offline Packages\devexpress.expressapp.treelisteditors.win\23.1.6\lib\net6.0-windows\DevExpress.ExpressApp.TreeListEditors.Win.v23.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Win.v23.1">
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Offline Packages\devexpress.expressapp.win.design\23.1.6\lib\net6.0-windows\DevExpress.ExpressApp.Win.v23.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v23.1">
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Offline Packages\devexpress.utils\23.1.6\lib\net6.0-windows\DevExpress.Utils.v23.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v23.1">
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.1\Components\Offline Packages\devexpress.win.grid\23.1.6\lib\net6.0-windows\DevExpress.XtraGrid.v23.1.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
