@@ -1,4 +1,5 @@
-﻿using DevExpress.Persistent.Base;
+﻿using DevExpress.ExpressApp.DC;
+using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Xpo;
 
@@ -7,6 +8,7 @@ namespace finalll.Module.BusinessObjects
     [DefaultClassOptions]
     [NavigationItem("Proje Yönetimi")]
     [Persistent("CALİSAN")]
+    [XafDisplayName("Çalışan")]
     public class Calisan : Person
     { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
         // Use CodeRush to create XPO classes and properties with a few keystrokes.
@@ -33,6 +35,7 @@ namespace finalll.Module.BusinessObjects
 
         Project projeninIsmi;
         [Association("Project-Calisanlar", typeof(Project))]
+        [XafDisplayName("Projenin Adı")]
         public Project ProjeninIsmi
         {
             get => projeninIsmi;

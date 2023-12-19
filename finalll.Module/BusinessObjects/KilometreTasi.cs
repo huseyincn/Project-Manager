@@ -1,4 +1,5 @@
-﻿using DevExpress.Persistent.Base;
+﻿using DevExpress.ExpressApp.DC;
+using DevExpress.Persistent.Base;
 using DevExpress.Persistent.Base.General;
 using DevExpress.Xpo;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ namespace finalll.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [NavigationItem("Proje Yönetimi")]
+    [XafDisplayName("Kilometre Taşı")]
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
@@ -33,7 +35,8 @@ namespace finalll.Module.BusinessObjects
         {
             this.Name = name;
         }
-        [Association("ProjectGroup-Projects"), Aggregated]
+        [Association("ProjectGroup-Projects"), DevExpress.Xpo.Aggregated]
+        [XafDisplayName("Görevler")]
         public XPCollection<Gorev> Projects
         {
             get
@@ -44,6 +47,7 @@ namespace finalll.Module.BusinessObjects
 
         Project projeninIsmi;
         [Association("Project-KMTaslari", typeof(KilometreTasi))]
+        [XafDisplayName("Projenin Adı")]
         public Project ProjeninIsmi
         {
             get => projeninIsmi;

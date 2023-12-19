@@ -33,6 +33,7 @@ namespace finalll.Module.BusinessObjects
             get;
         }
         public STreeNode(Session session) : base(session) { }
+        [XafDisplayName("Adı")]
         public string Name
         {
             get

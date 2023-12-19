@@ -1,4 +1,5 @@
-﻿using DevExpress.Persistent.Base;
+﻿using DevExpress.ExpressApp.DC;
+using DevExpress.Persistent.Base;
 using DevExpress.Persistent.Base.General;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Xpo;
@@ -11,6 +12,7 @@ namespace finalll.Module.BusinessObjects
     [ImageName("BO_Contact")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     [Persistent("PROJE")]
+    [XafDisplayName("Proje")]
     // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
     [System.ComponentModel.DisplayName("Projeler")]
     [DefaultProperty("ProjeAdi")]
@@ -62,18 +64,20 @@ namespace finalll.Module.BusinessObjects
         private ProjeTipi _projeTipi;
 
         [Size(SizeAttribute.DefaultStringMappingFieldSize)]
+        [XafDisplayName("Projenin Adı")]
         public string ProjeAdi
         {
             get { return _projeAdi; }
             set { SetPropertyValue(nameof(ProjeAdi), ref _projeAdi, value); }
         }
 
+        [XafDisplayName("Proje No")]
         public int ProjeNo
         {
             get { return _projeNo; }
             set { SetPropertyValue(nameof(ProjeNo), ref _projeNo, value); }
         }
-
+        [XafDisplayName("Proje Yürütücüsü")]
         public ProjeYurutucusu ProjeYurutucusu
         {
             get { return _projeYurutucusu; }
@@ -93,12 +97,14 @@ namespace finalll.Module.BusinessObjects
             }
         }
 
+        [XafDisplayName("Projenin Amacı")]
         public string ProjeAmaci
         {
             get { return _projeAmaci; }
             set { SetPropertyValue(nameof(ProjeAmaci), ref _projeAmaci, value); }
         }
 
+        [XafDisplayName("Kayıt Tarihi")]
         public DateTime KayitTarihi
         {
             get => _kayitTarihi;
@@ -106,6 +112,7 @@ namespace finalll.Module.BusinessObjects
         }
 
         [Browsable(true)]
+        [XafDisplayName("Proje Başlangıcı")]
         public DateTime ProjeBaslangici
         {
             get => _projeBaslangici;
@@ -113,36 +120,42 @@ namespace finalll.Module.BusinessObjects
         }
 
         [Browsable(true)]
+        [XafDisplayName("Projenin Bitişi")]
         public DateTime ProjeBitisi
         {
             get => _projeBitisi;
             set => SetPropertyValue(nameof(ProjeBitisi), ref _projeBitisi, value);
         }
 
+        [XafDisplayName("Tahmini Başlangıç")]
         public DateTime TahminiBaslangic
         {
             get => _tahminiBaslangic;
             set => SetPropertyValue(nameof(TahminiBaslangic), ref _tahminiBaslangic, value);
         }
 
+        [XafDisplayName("Bitiş Tarihi")]
         public DateTime Bitis
         {
             get => _bitis;
             set => SetPropertyValue(nameof(Bitis), ref _bitis, value);
         }
 
+        [XafDisplayName("Proje Durumu")]
         public ProjeDurumu ProjeDurum
         {
             get => _projeDurumu;
             set => SetPropertyValue(nameof(ProjeDurum), ref _projeDurumu, value);
         }
 
+        [XafDisplayName("Projenin Getirisi")]
         public int Getiri
         {
             get => _projeGetirisi;
             set => SetPropertyValue(nameof(Getiri), ref _projeGetirisi, value);
         }
 
+        [XafDisplayName("Getiri Tipi")]
         public ParasalGetiriTipi GetiriTip
         {
             get => _parasalGetiriTipi;
@@ -151,6 +164,7 @@ namespace finalll.Module.BusinessObjects
 
 
         [Association("Project-Calisanlar",typeof(Calisan))]
+        [XafDisplayName("Çalışanlar")]
         public XPCollection<Calisan> Calisanlar
         {
             get
@@ -166,19 +180,22 @@ namespace finalll.Module.BusinessObjects
         //}
 
 
-        [Association, Aggregated]
+        [Association, DevExpress.Xpo.Aggregated]
+        [XafDisplayName("Dosyalar")]
         public XPCollection<Dokuman> Files
         {
             get { return GetCollection<Dokuman>("Files"); }
         }
 
+        [XafDisplayName("Projenin Tipi")]
         public ProjeTipi projetipi
         {
             get => _projeTipi;
             set => SetPropertyValue(nameof(projetipi), ref _projeTipi, value);
         }
 
-        [Association("Project-KMTaslari", typeof(KilometreTasi)),Aggregated]
+        [Association("Project-KMTaslari", typeof(KilometreTasi)), DevExpress.Xpo.Aggregated]
+        [XafDisplayName("Kilometre Taşı")]
         public XPCollection<KilometreTasi> KMTaslari
         {
             get

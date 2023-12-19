@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Logo="ExpressAppLogo">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Cancel" Caption="İptal" />
+      <Action Id="Close" Caption="Kapat" />
+      <Action Id="Delete" Caption="Sil" />
+      <Action Id="Exit" Caption="Çıkış" />
+      <Action Id="New" Caption="Yeni" />
+      <Action Id="Print" Caption="Yazdır" />
+      <Action Id="Refresh" Caption="Yenile" />
+      <Action Id="Save" Caption="Kaydet" />
+      <Action Id="SaveAndClose" Caption="Kaydet ve Kapat" />
+      <Action Id="SaveAndNew" Caption="Kaydet ve Yeni" />
+      <Action Id="SaveTo" Caption="Farklı Kaydet" />
+    </Actions>
+  </ActionDesign>
   <NavigationItems NavigationStyle="NavBar" DefaultChildItemsDisplayStyle="List">
     <Items>
       <Item Id="Default" Caption="Kullanıcı Yönetimi" />
@@ -22,4 +37,113 @@
     <SchemaModule Name="SystemModule" Version="23.1.6.0" IsNewNode="True" />
     <SchemaModule Name="SystemWindowsFormsModule" Version="23.1.6.0" IsNewNode="True" />
   </SchemaModules>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_Blazor_DetailView">
+      <Items>
+        <StaticText Id="LogonText" Text="Lütfen Kullanıcı Adınızı Ve Şifrenizi Giriniz." />
+        <PropertyEditor Id="Password" Caption="Şifre" />
+        <PropertyEditor Id="UserName" Caption="Kullanıcı Adı" />
+      </Items>
+    </DetailView>
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView">
+      <Items>
+        <StaticText Id="LogonText" Text="Merhaba! Lütfen Kullanıcı Adı Ve Şifrenizi Giriniz." />
+        <PropertyEditor Id="Password" Caption="Şifre" />
+        <PropertyEditor Id="UserName" Caption="Kullanıcı Adı" />
+      </Items>
+    </DetailView>
+    <ListView Id="AuthenticationStandardLogonParameters_ListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Kullanıcı Adı" />
+        <ColumnInfo Id="Password" Caption="Şifre" />
+      </Columns>
+    </ListView>
+    <ListView Id="AuthenticationStandardLogonParameters_LookupListView">
+      <Columns>
+        <ColumnInfo Id="UserName" Caption="Kullanıcı Adı" />
+      </Columns>
+    </ListView>
+    <DetailView Id="Calisan_DetailView">
+      <Items>
+        <PropertyEditor Id="Address1" Caption="Addres 1" />
+        <PropertyEditor Id="Address2" Caption="Addres 2" />
+        <PropertyEditor Id="Birthday" Caption="Doğum Tarihi" />
+        <PropertyEditor Id="DisplayName" Caption="Ad-Soyad" />
+        <PropertyEditor Id="Email" Caption="E-mail" />
+        <PropertyEditor Id="FirstName" Caption="Ad" />
+        <PropertyEditor Id="FullName" Caption="Tam Ad Soyad" />
+        <PropertyEditor Id="LastName" Caption="Soyad" />
+        <PropertyEditor Id="MiddleName" Caption="İkinci Ad" />
+        <PropertyEditor Id="PhoneNumbers" Caption="Telefon Numaraları" />
+        <PropertyEditor Id="Photo" Caption="Fotoğraf" />
+      </Items>
+    </DetailView>
+    <ListView Id="Calisan_ListView">
+      <Columns>
+        <ColumnInfo Id="Address1" Caption="Addres 1" />
+        <ColumnInfo Id="Address2" Caption="Addres 2" />
+        <ColumnInfo Id="Birthday" Caption="Doğum Tarihi" />
+        <ColumnInfo Id="DisplayName" Caption="Tam Ad-Soyad" />
+        <ColumnInfo Id="Email" Caption="E-mail" />
+        <ColumnInfo Id="FirstName" Caption="Ad" />
+        <ColumnInfo Id="LastName" Caption="Soyad" />
+        <ColumnInfo Id="MiddleName" Caption="İkinci İsim" />
+        <ColumnInfo Id="Photo" Caption="Fotoğraf" />
+        <ColumnInfo Id="FullName" Caption="Ad-Soyad" />
+      </Columns>
+    </ListView>
+    <ListView Id="Calisan_LookupListView">
+      <Columns>
+        <ColumnInfo Id="FullName" Caption="Ad Soyad" />
+      </Columns>
+    </ListView>
+    <ListView Id="Project_Calisanlar_ListView">
+      <Columns>
+        <ColumnInfo Id="Address1" Caption="Addres 1" />
+        <ColumnInfo Id="Address2" Caption="Addres 2" />
+        <ColumnInfo Id="DisplayName" Caption="Tam Ad-Soyad" />
+        <ColumnInfo Id="Photo" Caption="Fotoğraf" />
+        <ColumnInfo Id="FullName" Caption="Ad-Soyad" />
+        <ColumnInfo Id="FirstName" Caption="Ad" />
+        <ColumnInfo Id="LastName" Caption="Soyad" />
+        <ColumnInfo Id="MiddleName" Caption="İkinci Ad" />
+        <ColumnInfo Id="Birthday" Caption="Doğum Tarihi" />
+        <ColumnInfo Id="Email" Caption="E-mail" />
+      </Columns>
+    </ListView>
+    <DetailView Id="ProjeYurutucusu_DetailView">
+      <Items>
+        <PropertyEditor Id="Address1" Caption="Addres 1" />
+        <PropertyEditor Id="Address2" Caption="Addres 2" />
+        <PropertyEditor Id="Birthday" Caption="Doğum Tarihi" />
+        <PropertyEditor Id="DisplayName" Caption="Ad-Soyad" />
+        <PropertyEditor Id="Email" Caption="E-mail" />
+        <PropertyEditor Id="FirstName" Caption="Ad" />
+        <PropertyEditor Id="FullName" Caption="Tam Ad Soyad" />
+        <PropertyEditor Id="LastName" Caption="Soyad" />
+        <PropertyEditor Id="MiddleName" Caption="İkinci İsim" />
+        <PropertyEditor Id="PhoneNumbers" Caption="Telefon Numarası" />
+        <PropertyEditor Id="Photo" Caption="Fotoğraf" />
+      </Items>
+    </DetailView>
+    <ListView Id="ProjeYurutucusu_ListView">
+      <Columns>
+        <ColumnInfo Id="Address1" Caption="Addres 1" />
+        <ColumnInfo Id="Address2" Caption="Addres 2" />
+        <ColumnInfo Id="Birthday" Caption="Doğum Tarihi" />
+        <ColumnInfo Id="DisplayName" Caption="Ad-Soyad" />
+        <ColumnInfo Id="Email" Caption="E-mail" />
+        <ColumnInfo Id="FirstName" Caption="Ad" />
+        <ColumnInfo Id="LastName" Caption="Soyad" />
+        <ColumnInfo Id="MiddleName" Caption="İkinci Ad" />
+        <ColumnInfo Id="Photo" Caption="Fotoğraf" />
+        <ColumnInfo Id="FullName" Caption="Ad-Soyad" />
+      </Columns>
+    </ListView>
+    <ListView Id="ProjeYurutucusu_LookupListView">
+      <Columns>
+        <ColumnInfo Id="FullName" Caption="Ad-Soyad" />
+      </Columns>
+    </ListView>
+  </Views>
 </Application>

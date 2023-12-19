@@ -1,4 +1,5 @@
 ﻿using DevExpress.ExpressApp;
+using DevExpress.ExpressApp.DC;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Xpo;
@@ -9,6 +10,7 @@ namespace finalll.Module.BusinessObjects
     [DefaultClassOptions]
     [FileAttachment("File")]
     [Persistent("DOKUMAN")]
+    [XafDisplayName("Dosya")]
     public class Dokuman : XPObject
     { 
         public Dokuman(Session session)
@@ -21,6 +23,7 @@ namespace finalll.Module.BusinessObjects
         }
 
         [Association]
+        [XafDisplayName("Projenin Adı")]
         public Project Gorev
         {
             get { return GetPropertyValue<Project>("Gorev"); }
@@ -28,6 +31,7 @@ namespace finalll.Module.BusinessObjects
         }
 
         private FileData _file;
+        [XafDisplayName("Dosya")]
         public FileData File
         {
             get { return _file; }

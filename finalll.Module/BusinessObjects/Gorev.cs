@@ -1,4 +1,5 @@
 ﻿using DevExpress.ExpressApp.ConditionalAppearance;
+using DevExpress.ExpressApp.DC;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.Base.General;
 using DevExpress.Persistent.BaseImpl;
@@ -10,6 +11,7 @@ namespace finalll.Module.BusinessObjects
     [DefaultClassOptions]
     [FileAttachment("Files")]
     [NavigationItem("Proje Yönetimi")]
+    [XafDisplayName("Görev")]
     //[ImageName("BO_Contact")]
     //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
@@ -40,6 +42,7 @@ namespace finalll.Module.BusinessObjects
             this.Name = name;
         }
         [Association("ProjectGroup-Projects")]
+        [XafDisplayName("Kilometre Taşı")]
         public KilometreTasi ProjectGroup
         {
             get
@@ -53,6 +56,7 @@ namespace finalll.Module.BusinessObjects
         }
 
         private DateTime _endDate;
+        [XafDisplayName("Bitiş Tarihi")]
         public DateTime EndDate
         {
             get { return _endDate; }
@@ -67,6 +71,7 @@ namespace finalll.Module.BusinessObjects
         }
 
         private TaskDurum _taskDurum;
+        [XafDisplayName("Görev Durumu")]
         public TaskDurum TaskDurumu
         {
             get { return _taskDurum; }

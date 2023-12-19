@@ -1,4 +1,5 @@
-﻿using DevExpress.Persistent.Base;
+﻿using DevExpress.ExpressApp.DC;
+using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Xpo;
 
@@ -6,6 +7,7 @@ namespace finalll.Module.BusinessObjects
 {
     [DefaultClassOptions]
     [NavigationItem("Proje Yönetimi")]
+    [XafDisplayName("Proje Yöneticisi")]
     [Persistent("PROJE_YURUTUCUSU")]
     public class ProjeYurutucusu : Person
     { 
@@ -20,6 +22,7 @@ namespace finalll.Module.BusinessObjects
 
 
         private Project _project;
+        [XafDisplayName("Projenin Adı")]
         public Project Project
         {
             get { return _project; }
