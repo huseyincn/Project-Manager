@@ -1,4 +1,5 @@
-﻿using DevExpress.ExpressApp.DC;
+﻿using DevExpress.ExpressApp.ConditionalAppearance;
+using DevExpress.ExpressApp.DC;
 using DevExpress.Persistent.Base;
 using DevExpress.Persistent.Base.General;
 using DevExpress.Persistent.BaseImpl;
@@ -13,7 +14,8 @@ namespace finalll.Module.BusinessObjects
     //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
     [Persistent("PROJE")]
     [XafDisplayName("Proje")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
+    [Appearance("RedIfDue", TargetItems = "*", Criteria = "Bitis < LocalDateTimeToday() AND ProjeDurum != 'TAMAMLANDI'", BackColor = "Red")]
+    [Appearance("GreenIfDone", TargetItems = "*", Criteria = "ProjeDurum = 'TAMAMLANDI'", BackColor = "Green")]
     [System.ComponentModel.DisplayName("Projeler")]
     [DefaultProperty("ProjeAdi")]
     public class Project : XPObject

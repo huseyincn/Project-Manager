@@ -55,6 +55,14 @@ namespace finalll.Module.BusinessObjects
             }
         }
 
+        private DateTime startDate;
+        [XafDisplayName("Başlangıç Tarihi")]
+        public DateTime StartDate
+        {
+            get { return startDate; }
+            set { SetPropertyValue("StartDate", ref startDate, value); }
+        }
+
         private DateTime _endDate;
         [XafDisplayName("Bitiş Tarihi")]
         public DateTime EndDate

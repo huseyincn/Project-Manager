@@ -97,6 +97,7 @@
         <ColumnInfo Id="FullName" Caption="Ad Soyad" />
       </Columns>
     </ListView>
+    <ListView Id="Gorev_ListView" EditorTypeName="finalll.Win.Editors.CustomGanttEditor" />
     <ListView Id="Project_Calisanlar_ListView">
       <Columns>
         <ColumnInfo Id="Address1" Caption="Addres 1" />
